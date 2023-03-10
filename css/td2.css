@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+/*-----Exercice 1-----*/
+#title {
+	background-color: bisque;
+}
+.titre2 {
+	background-color: blanchedalmond;
+}
+span {
+	background-color: aquamarine;
+}
+
+/*-----Exercice 2-----*/
+.select {
+	background-color: blueviolet;
+}
