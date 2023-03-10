@@ -141,6 +141,15 @@ function search() {
 	}
 
 }	
+function interactiveSearch() {
+	searchValue = document.getElementById("searchInteractiveText").value;
+	if (searchValue === "") {
+		console.log("vide");
+	} else {
+		newStringReplace = '<span class="select">' + searchValue + "</span>";
+		searchReplace(searchValue, newStringReplace);
+	}
+}
 function searchReplace(oldString, newString, element = document.body) {
 	if (element.nodeType === Node.TEXT_NODE) {
 		let texte = element.nodeValue;
@@ -154,14 +163,5 @@ function searchReplace(oldString, newString, element = document.body) {
 		for (let i = 0; i < element.childNodes.length; i++) {
 			searchReplace(oldString, newString, element.childNodes[i]);
 		}
-	}
-}
-function interactiveSearch() {
-	searchValue = document.getElementById("searchInteractiveText").value;
-	if (searchValue === "") {
-		console.log("vide");
-	} else {
-		newStringReplace = '<span class="select">' + searchValue + "</span>";
-		searchReplace(searchValue, newStringReplace);
 	}
 }
